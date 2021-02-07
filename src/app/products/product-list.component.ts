@@ -10,7 +10,7 @@ export class ProductListComponent implements OnInit {
   title = 'Product List';
   imageWidth = 50;
   imageMargin = 2;
-  showImage: boolean = true;
+  showImage = true;
   _listFilter = '';
   get listFilter(): string {
     return this._listFilter;
@@ -77,10 +77,14 @@ export class ProductListComponent implements OnInit {
 
  constructor() {
     this.filteredProducts = this.products;
-    //this.listFilter = 'Cart';
+    // this.listFilter = 'Cart';
  }
 
- performFilter(filterBy: string): IProduct[] {
+ onRatingClicked(message: string): void {
+    this.title = 'Product List: ' + message;
+  }
+
+  performFilter(filterBy: string): IProduct[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.products.filter((product: IProduct) =>
       product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
