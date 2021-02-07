@@ -1,9 +1,15 @@
-body{
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+*,body,.card-header{
   background-color: rgba(0, 0, 0, 0.733);
   color: #fff;
 }
-
-/* You can add global styles to this file, and also import other style files */
+input{
+  background-color: rgb(154, 221, 154);
+  color: #fff;
+}
 div.card-header {
  font-size: large;
 }
