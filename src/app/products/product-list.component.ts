@@ -10,7 +10,7 @@ export class ProductListComponent implements OnInit {
   title = 'Product List';
   imageWidth = 50;
   imageMargin = 2;
-  showImage: boolean = false;
+  showImage: boolean = true;
   _listFilter = '';
   get listFilter(): string {
     return this._listFilter;
@@ -50,7 +50,7 @@ export class ProductListComponent implements OnInit {
       releaseDate: 'May 21, 2019',
       description: 'Curved claw steel hammer',
       price: 8.9,
-      starRating: 4.8,
+      starRating: 1.6,
       imageUrl: 'assets/images/hammer.png'
     },
     {
@@ -77,7 +77,7 @@ export class ProductListComponent implements OnInit {
 
  constructor() {
     this.filteredProducts = this.products;
-    this.listFilter = 'Cart';
+    //this.listFilter = 'Cart';
  }
 
  performFilter(filterBy: string): IProduct[] {
