@@ -11,6 +11,7 @@ import { StarComponent } from './shared/star.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductDetailGuard } from './products/product-detail.guard';
 import { WelcomeComponent } from './home/welcome.component';
+import { ProductModule } from './products/product.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { WelcomeComponent } from './home/welcome.component';
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),
-    FormsModule
+    FormsModule,
+    ProductModule
   ],
   bootstrap: [AppComponent]
 })
